@@ -11,13 +11,6 @@ def get_receiver_top_orders(heights):
             if height <= heights[i]:
                 answer[len(heights)] = i+1
                 break
-    #
-    # for i in range(len(heights) - 1, 0, -1):
-    #     for j in range(i - 1, -1, -1):
-    #         if heights[i] <= heights[j]:
-    #             answer[i] = j + 1
-    #             break
-
     return answer
 
 

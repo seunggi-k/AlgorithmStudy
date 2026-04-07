@@ -2,8 +2,20 @@ prices = [1, 2, 3, 2, 3]
 
 
 def get_price_not_fall_periods(prices):
-    # 이 부분을 채워주세요!
-    return
+    result = []
+
+    for i in range(len(prices)):
+        temp = 0
+
+        for j in range(i + 1, len(prices)):
+            temp += 1
+
+            if prices[j] < prices[i]:
+                break
+
+        result.append(temp)
+
+    return result
 
 
 print(get_price_not_fall_periods(prices))
